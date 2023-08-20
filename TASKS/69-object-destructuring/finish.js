@@ -12,6 +12,16 @@ const objectWithNumbers = {
   z: 3,
 }
 
+function mult(numbers) {
+
+  let result = 1;
+
+  for (const key in numbers) {
+    result *= numbers[key];
+  }
+
+  return result
+}
 // Создайте функцию здесь
 
 const result = mult(objectWithNumbers)

@@ -12,4 +12,4 @@ function fn() {
   }
 }
 
-fn()(true)
+fn()('f')

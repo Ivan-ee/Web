@@ -8,3 +8,8 @@
  *
  * 4. Выведите в консоль измененный массив
  */
+
+const arr = [10, 'is', true]
+console.log(arr)
+
+arr.reduce()

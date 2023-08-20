@@ -12,3 +12,16 @@
  *
  * 4. Вызовите функцию
  */
+
+
+/**
+ * Возрващает разицу двух чисел
+ * @param {number} a
+ * @param {number} b
+ * @returns {number} Разница чисел
+ */
+function sum(a, b) {
+    return a - b
+}
+
+console.log(sum(15, 10))

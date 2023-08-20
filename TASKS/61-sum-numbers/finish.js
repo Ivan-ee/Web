@@ -8,6 +8,12 @@
  * 3. Также верните эту сумму как результат функции
  */
 
+function sumNumbers(...numbers) {
+    const sum = numbers.reduce((sum, num) => sum + num, 0)
+    console.log(sum)
+    return sum
+}
+
 sumNumbers(1, 3)
 // 4
 

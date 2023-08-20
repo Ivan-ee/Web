@@ -17,17 +17,17 @@ const photosGallery = (title, dimensions, date) => {
     title: title,
     info: function() {
       console.log(
-        "Фото "${title}" имеет разрешение ${date}`
+        `Фото ${title} имеет разрешение $\{date}`
       );
     },
-    dimensions: dimensions
+    dimensions: dimensions,
     publishInfo: () => {
       console.log(
-        `Фото было опубликовано ${Math.floor(
-          (new Date().getTime() - date.getTime()) / 1000
-        )} секунды назад`
+          `Фото было опубликовано ${Math.floor(
+              (new Date().getTime() - date.getTime()) / 1000
+          )} секунды назад`
       );
-    ,
+    },
     date: date
   }
 }

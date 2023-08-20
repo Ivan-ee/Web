@@ -7,3 +7,6 @@
  *
  * 3. Выведите значение переменной в консоль
  */
+
+const country = 'Russia'
+console.log(country)

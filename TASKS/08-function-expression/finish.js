@@ -10,3 +10,14 @@
  *
  * 5. Результат вызовов функции выведите в консоль
  */
+
+
+const f = function (name) {
+    console.log(`Привет, ${name}`)
+}
+
+const name_1 = 'Ivan'
+const name_2 = 'Ivannn'
+
+f(name_1)
+f(name_2)

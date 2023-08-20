@@ -8,3 +8,10 @@
  *
  * 4. Вызовите функцию
  */
+
+
+function sum() {
+    console.log('My name is name')
+}
+
+sum()

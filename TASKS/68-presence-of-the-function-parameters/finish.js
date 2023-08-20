@@ -5,7 +5,12 @@
  * "Функция "square" не может быть вызвана без аргумента"
  */
 
-function square(a) {
+function square() {
+  let a = arguments[0]
+  if (!a) {
+    throw new Error('Функция "square" не может быть вызвана без аргумента')
+  }
+
   console.log(a * a)
 }
 

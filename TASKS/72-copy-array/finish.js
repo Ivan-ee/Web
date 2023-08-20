@@ -8,6 +8,15 @@ const a = [1, 2, 3]
 
 // Напишите код здесь
 
+
+
+const b = [...a]
+
+
+b[1] = 10
+
+a[2] = 20
+
 b.push('newElement')
 
 console.log(a)

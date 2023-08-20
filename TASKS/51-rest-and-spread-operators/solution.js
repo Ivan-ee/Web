@@ -25,6 +25,7 @@ function meanScore(...numbers) {
    * РАВНОСИЛЬНО
    * (num1 + num2 + ... + num10) / numbers.length
    */
+
   return numbers
     .reduce((mean, num) => mean + num / numbers.length, 0)
     .toFixed(2)

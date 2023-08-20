@@ -16,6 +16,32 @@ const b = [4, 10, 14, 25, 25, 50]
 const c = [150, 132, 80, 40]
 const d = [15, 26, 10, 23, 85]
 
+function arraySortInfo(inputArray) {
+    let isASC = true;
+    let isDESC = true;
+
+    for (let i = 0; i < inputArray.length - 1; i++) {
+        if (typeof inputArray[i] !== 'number') {
+            return 'Некоторые элементы не являются числами';
+        }
+
+        if (inputArray[i] > inputArray[i + 1]) {
+            isASC = false;
+
+        } else if (inputArray[i] < inputArray[i + 1]) {
+            isDESC = false;
+        }
+    }
+
+    if (isASC) {
+        return 'Массив отсортирован по возрастанию';
+    } else if (isDESC) {
+        return 'Массив отсортирован по убыванию';
+    } else {
+        return 'Массив не отсортирован';
+    }
+}
+
 console.log(arraySortInfo(a)) // Некоторые элементы не являются числами
 console.log(arraySortInfo(b)) // Массив отсортирован по возрастанию
 console.log(arraySortInfo(c)) // Массив отсортирован по убыванию

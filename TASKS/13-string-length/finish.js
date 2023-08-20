@@ -4,3 +4,7 @@
  *
  * 2. Виведите в консоль длину этой строки
  */
+
+const stroka = 'Hello world!'
+
+console.log(stroka.length)

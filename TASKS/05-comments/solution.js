@@ -15,9 +15,9 @@
 const myName = 'Bogdan' // это моё имя
 
 // MULTILINE COMMENT 1
-/* Это
+/** Это
 многострочный 
-комментарий */
+комментарий **/
 
 const mySurname = 'Stashchuk'
 

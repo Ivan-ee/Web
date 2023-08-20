@@ -18,16 +18,36 @@ const scores2 = [1.7, 4.5, 0, 4.9, 5.0, 4.2]
 const scores3 = [1.3, 2.5, 1.9]
 const scores4 = ['abc', 1.3, true, 2.5, 1.9]
 
-console.log(meanScore(/* все элементы из массива "scores1" */))
+function meanScore(...numbers) {
+    let mergedArray = []
+
+    for (let i = 0; i < numbers.length; i++) {
+        mergedArray = mergedArray.concat([...numbers[i]])
+    }
+
+    const areAllNumbers = mergedArray.every(element => typeof element === "number")
+
+    return areAllNumbers ? calculateAverage(mergedArray) : 'Все аргументы в вызове функции должны быть числами!'
+}
+
+function calculateAverage(arr) {
+    const sum = arr.reduce((acc, current) => acc + current, 0);
+    const average = sum / arr.length;
+    return +average.toFixed(2);
+}
+
+console.log(meanScore(scores1, scores2))
+
+console.log(meanScore(scores1))
 // 1.93
 
-console.log(meanScore(/* все элементы из массивов "scores1" и "scores2" */))
+console.log(meanScore(scores1,scores2))
 // 2.8
 
 console.log(
-  meanScore(/* все элементы из массивов "scores1", "scores2" и "scores3" */)
+  meanScore(scores1,scores2,scores3)
 )
 // 2.59
 
-console.log(meanScore(/* все элементы из массива "scores4" */))
+console.log(meanScore(scores4))
 // Все аргументы в вызове функции должны быть числами!

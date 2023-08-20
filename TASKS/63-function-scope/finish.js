@@ -17,5 +17,5 @@ function myFn2(a) {
   let c = 5
   console.log(a, b, c, d)
 }
-
+// 'und', 2, 5, 15
 myFn1()

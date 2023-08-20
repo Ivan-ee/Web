@@ -16,6 +16,19 @@ const objectWithNumbers = {
   d: 12,
 }
 
+function sumObjectValues(object) {
+
+  let sum = 0
+
+  for (const key in object) {
+    if (typeof object[key] === 'number') {
+      sum += object[key]
+    }
+  }
+
+  return sum
+}
+
 // Создайте функцию здесь
 
 const result = sumObjectValues(objectWithNumbers)

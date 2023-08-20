@@ -13,3 +13,24 @@
  * 4. Убедитесь, что остальные методы массивов такие,
  * как "forEach", "map" также доступны
  */
+
+class ExtendedArray extends Array{
+    sum() {
+        return this.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue})
+    }
+    onlyNumbers() {
+        return this.filter(item => typeof item === 'number')
+    }
+}
+
+const arr2 = new ExtendedArray(1,true, 'yes',2,3)
+const arr1 = new ExtendedArray(10,20,30)
+
+console.log(arr1.onlyNumbers())
+console.log(arr2.onlyNumbers())
+
+console.log(arr1.sum())
+console.log(arr2.sum())
+
+arr1.forEach((el) => console.log(el))

@@ -12,3 +12,10 @@
  * "Сообщение номер 4"
  * "Сообщение номер 5"
  */
+
+const interval = 2000
+
+let timerId = setInterval(() => console.log(`Сообщение номер ${timerId}`), interval);
+
+// остановить вывод через 5 секунд
+setTimeout(() => { clearInterval(timerId);}, interval * 5);

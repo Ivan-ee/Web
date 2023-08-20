@@ -17,7 +17,9 @@ let person = {
   cartId: 435,
 }
 
-console.log(person)
+const {_id, processed, cart, ...newPerson} = person
+
+console.log(newPerson)
 /*
 {
   index: 4,

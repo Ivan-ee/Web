@@ -23,12 +23,25 @@ const fruits = [
 
 const primitiveTypesArray = [25, 'x', true, undefined, null]
 
+function isElementInArray(searchElement, inputArray) {
+  if (typeof searchElement !== 'object') {
+    return inputArray.includes(searchElement);
+  } else {
+    const searchString = searchElement.toString();
+    return inputArray.some((item) => item.toString() === searchString);
+  }
+}
+
+console.log(tags)
+console.log(fruits)
+console.log(primitiveTypesArray)
+
 console.log(isElementInArray(['css', 'flexbox'], tags)) // true
 
 console.log(isElementInArray(['flexbox', 'css'], tags)) // false
 
 console.log(isElementInArray({ title: 'Apple', quantity: 25 }, fruits)) // true
 
-console.log(isElementInArray({ title: 'Banana' }, fruits)) // false
+console.log(isElementInArray({ title: 'Blue' }, fruits)) // false
 
 console.log(isElementInArray(25, primitiveTypesArray)) // true

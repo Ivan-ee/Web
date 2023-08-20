@@ -7,3 +7,11 @@
  *
  * 3. Выведите значение последней переменной в консоль
  */
+
+
+const numberA = 10
+const numberB = 3
+
+const sum = numberA * numberB
+
+console.log(sum)

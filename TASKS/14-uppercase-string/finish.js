@@ -12,3 +12,15 @@
  *
  * 5. Выведите в консоль значение второй переменной
  */
+
+const stroka = 'Ivannn-ee'
+
+console.log(stroka instanceof String)
+
+const isString = typeof stroka === "string"
+console.log(isString)
+
+const str = stroka.toUpperCase()
+console.log(str)
+
+
