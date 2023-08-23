@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vanilla.js</title>
+    <style>
+        .app {
+            text-align: center;
+        }
+        .green-btn {
+            color: white;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <button id="button" onclick="ButtonClick('button')">Click Me</button>
+    </div>
+    <script>
+        function ButtonClick(id) {
+            const button = document.getElementById(id)
+            button.innerHTML = 'Hello from Vanilla JS'
+            button.className = 'green-btn'
+        }
+    </script>
+</body>
+</html>

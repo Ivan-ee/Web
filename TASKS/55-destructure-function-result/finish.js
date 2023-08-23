@@ -9,20 +9,18 @@
 
 let min, max
 
-function minMax(...numbers) {
-    numbers.sort((a, b) => a - b)
-
-    const [min, max] = [numbers[0], numbers[numbers.length - 1]]
-
-    return [min, max]
+const user = {
+    name: 'Ivan',
+    age: 10,
 }
 
+function minMax({name, age}) {
+    age = 30
+}
 
-[min, max] = minMax(24, 5, 34, 10)
-//  Вызовите здесь функцию "minMax" с аргументами 24, 5, 34, 10
-// и используя деструктуризацию массивов присвойте значения переменным "min" и "max"
-console.log(min, max); // 5, 34
+minMax(user)
 
-[min, max] = minMax(18, 23, 103, 70, 80, 25)
-/* Вызовите здесь функцию "minMax" еще раз с аргументами 18, 23, 103, 70, 80, 25 */
-console.log(min, max) // 18, 103
+console.log(user)
+
+
+
