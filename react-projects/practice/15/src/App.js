@@ -2,6 +2,7 @@ import {useState} from "react";
 import './App.css';
 import Counter from "./components/Counter";
 import Button from "./components/Button";
+import ResetButton from "./components/ResetButton";
 
 const texts = ['Click Me', 'Hello', 'Biba', 'Good Van!']
 
@@ -14,8 +15,6 @@ function App() {
         setCount(0)
     }
 
-    const buttonStyle = {backgroundColor: 'red'}
-
     return (
         <div className="App">
             <Counter count={count}/>
@@ -24,11 +23,7 @@ function App() {
                 return <Button onClick={incrementCounter} text={text}/>
             })}
 
-            {count > 0 && (
-                <div>
-                    <button style={buttonStyle} onClick={resetCount}>Reset</button>
-                </div>
-            )}
+            <ResetButton count={count} onClick={resetCount}/>
 
         </div>
     );
